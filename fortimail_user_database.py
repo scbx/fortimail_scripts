@@ -2,7 +2,15 @@ import os, sys, re
 import xml.etree.ElementTree as ET
 import xml.dom.minidom as xmd
 
-# Example Datamodel
+# example input csv 
+# whitelist@domain;whitelist2@domain,blacklist@domain,blacklist2@domain,user1@fortimaildomain1.local
+# whitelist@domain;whitelist2@domain,blacklist@domain,blacklist2@domain,user2@fortimaildomain1.local
+# whitelist@domain;whitelist2@domain,blacklist@domain,blacklist2@domain,user1@fortimaildomain2.local
+# whitelist@domain;whitelist2@domain,blacklist@domain,blacklist2@domain,user2@fortimaildomain2.local
+#takes data like that and builds datamodel
+
+
+#Example Datamodel
 # domains = {'test.local':[{'user1':
 #                                  [{'whitelist':['domain1@test','domain2@test']},{'blacklist':['domain3@test','domain4@test']}],
 #                              'user2':
